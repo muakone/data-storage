@@ -1,0 +1,149 @@
+body {
+    height: 100vh;
+    width: 90%;
+    background-image: url(images/bg-desktop.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-color: hsl(229, 57%, 11%);
+    margin: 0;    
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 300px 450px;
+    position: relative;
+    top: 220px;
+    justify-content: baseline;
+    margin-left: 100px;
+}
+
+.left-col {
+    width: 290px;
+    height: 170px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 5px;
+    border-top-right-radius: 40%;
+}
+.logo {
+    margin: 30px;
+}
+.files {
+    margin-left: 30px;
+    display: flex;
+    grid-gap: 10px;
+    justify-content: baseline;
+}
+.file {
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 8px;
+    width: 40px;
+    height: 30px;
+    padding-top: 7px;
+    text-align: center;
+    
+}
+
+.right-col {
+    width: 500px;
+    height: 120px;
+    background-color: hsl(228, 56%, 26%);
+    margin-left: 25px;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+p {
+    color: hsl(243, 100%, 93%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: small;
+}
+h1 {
+    color: hsl(229, 57%, 11%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.data {
+    width: 300px;
+    height: 80px;
+    margin-left: 20px;
+}
+.pop-up {
+    width: 150px;
+    height: 60px;
+    background-color: white;
+    border-radius: 8px;
+    float: right;
+    position: relative;
+    display: flex;
+    left: 120px;
+    bottom: 85px;
+    justify-content: center;
+    align-items: center;
+}
+.pop-up::after {
+    width: 0px;
+    border-color: transparent white transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 20px;
+    bottom: -15px;
+    content: "";
+    display: flex;
+    right: 0;
+    position: absolute;
+}
+
+.pop-para {
+    margin-left: 5px;
+}
+
+
+.status {
+    width: 400px;
+    height: 16px;
+    border-radius: 50px;
+    background-color: hsl(229, 57%, 11%);
+    margin-left: 5px;
+    
+}
+.space {
+    width: 330px;
+    height: 12px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border: solid 2px hsl(229, 57%, 11%);
+    position: relative;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: hsl(243, 100%, 93%);
+    border-radius: 50%;
+    float: right;
+    margin-right: -185px;
+    position: relative;
+}
+.end {
+  display: inline; 
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+    margin-right: -250px;
+}
+
+
+.attribution {
+     font-size: 11px; 
+     text-align: center; 
+     margin-top: 420px;
+    }
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+    }
