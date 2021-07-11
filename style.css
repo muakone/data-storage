@@ -24,7 +24,7 @@ body {
     width: 290px;
     height: 170px;
     background-color: hsl(228, 56%, 26%);
-    border-radius: 5px;
+    border-radius: 10px;
     border-top-right-radius: 40%;
 }
 .logo {
@@ -51,7 +51,7 @@ body {
     height: 120px;
     background-color: hsl(228, 56%, 26%);
     margin-left: 25px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-top: 50px;
 }
 p {
@@ -147,3 +147,81 @@ h1 {
 .attribution a {
      color: hsl(228, 45%, 44%); 
     }
+
+
+@media(max-width:768px) {
+    body {
+        height: 100vh;
+        background-image: url(images/bg-mobile.png);
+        background-position: center;
+        background-size: contain;
+        background-color: hsl(229, 57%, 11%);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        top: 100px;
+        margin-right: 50px;
+    }
+
+    .left-col {
+        width: 300px;
+        height: 200px;
+    
+    }
+
+    .logo {
+        
+    }
+
+    .files {
+        padding-top: 15px;
+    }
+
+    .right-col {
+        width: 300px;
+        height: 175px;
+        margin-right: 20px;
+        margin-top: 15px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .data {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .pop-up { 
+        position: sticky;
+        top: 150px;
+        margin-right: 100px;
+        margin-top: 68px;
+    }
+
+    .pop-up::after {
+        bottom: 5px;
+    }
+    .status {
+        width: 250px;
+        height: 18px;
+    }
+    .space {
+        width: 180px;
+        border: solid 2px;
+    }
+
+    .circle {
+        margin-right: -135px;
+    }
+    .right {
+        margin-right: -195px;
+        right: 50px;
+        
+    }
+
+    .data > p {
+        margin-right: 52px;
+    }
+}
