@@ -1,23 +1,33 @@
 body {
     height: 100vh;
-    width: 90%;
     background-image: url(images/bg-desktop.png);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100% 50%;
     background-color: hsl(229, 57%, 11%);
-    margin: 0;    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentwrapper {
+    width: 100%;
+    max-width: 500px;
 }
 
 .container {
     display: grid;
     justify-content: center;
-    align-items: center;
-    grid-template-columns: 300px 450px;
-    position: relative;
-    top: 220px;
+    align-items: flex-end;
+    grid-template-columns: 1fr 2fr;
+    /* position: relative; */
+    /* top: 220px; */
+    grid-gap: 1.5em;
+    width: 80%;
     justify-content: baseline;
-    margin-left: 100px;
+    margin: 0 auto;
+    /* margin-left: 100px; */
 }
 
 .left-col {
@@ -27,15 +37,18 @@ body {
     border-radius: 10px;
     border-top-right-radius: 40%;
 }
+
 .logo {
     margin: 30px;
 }
+
 .files {
     margin-left: 30px;
     display: flex;
     grid-gap: 10px;
     justify-content: baseline;
 }
+
 .file {
     background-color: hsl(229, 57%, 11%);
     border-radius: 8px;
@@ -43,23 +56,29 @@ body {
     height: 30px;
     padding-top: 7px;
     text-align: center;
-    
 }
 
 .right-col {
     width: 500px;
     height: 120px;
     background-color: hsl(228, 56%, 26%);
-    margin-left: 25px;
     border-radius: 10px;
-    margin-top: 50px;
+    position: relative;
 }
+
+.pop-up-box {
+    position: absolute;
+    right: 35px;
+    top: -40px;
+}
+
 p {
     color: hsl(243, 100%, 93%);
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: small;
 }
+
 h1 {
     color: hsl(229, 57%, 11%);
     font-family: 'Raleway', sans-serif;
@@ -67,10 +86,12 @@ h1 {
 }
 
 .data {
-    width: 300px;
     height: 80px;
-    margin-left: 20px;
+    padding: 1em;
+    width: 90%;
+    margin: 0 auto;
 }
+
 .pop-up {
     width: 150px;
     height: 60px;
@@ -79,11 +100,10 @@ h1 {
     float: right;
     position: relative;
     display: flex;
-    left: 120px;
-    bottom: 85px;
     justify-content: center;
     align-items: center;
 }
+
 .pop-up::after {
     width: 0px;
     border-color: transparent white transparent transparent;
@@ -101,127 +121,96 @@ h1 {
     margin-left: 5px;
 }
 
-
 .status {
-    width: 400px;
     height: 16px;
     border-radius: 50px;
     background-color: hsl(229, 57%, 11%);
     margin-left: 5px;
-    
 }
+
 .space {
-    width: 330px;
+    width: 80%;
     height: 12px;
     border-radius: 50px;
-    background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     border: solid 2px hsl(229, 57%, 11%);
     position: relative;
 }
+
 .circle {
     width: 10px;
     height: 10px;
     background-color: hsl(243, 100%, 93%);
     border-radius: 50%;
     float: right;
-    margin-right: -185px;
-    position: relative;
-}
-.end {
-  display: inline; 
-}
-.left {
-    float: left;
-}
-.right {
-    float: right;
-    margin-right: -250px;
+    position: absolute;
+    right: 0;
 }
 
+.end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {}
+
+.right {}
 
 .attribution {
-     font-size: 11px; 
-     text-align: center; 
-     margin-top: 420px;
-    }
+    font-size: 11px;
+    text-align: center;
+    margin-top: 420px;
+}
+
 .attribution a {
-     color: hsl(228, 45%, 44%); 
-    }
+    color: hsl(228, 45%, 44%);
+}
 
-
-@media(max-width:768px) {
+@media(max-width:885px) {
     body {
-        height: 100vh;
         background-image: url(images/bg-mobile.png);
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-color: hsl(229, 57%, 11%);
     }
-
     .container {
         display: flex;
         flex-direction: column;
-        top: 100px;
-        margin-right: 50px;
+        align-items: center;
     }
-
     .left-col {
-        width: 300px;
+        width: 100%;
         height: 200px;
-    
     }
-
-    .logo {
-        
-    }
-
+    .logo {}
     .files {
         padding-top: 15px;
     }
-
     .right-col {
-        width: 300px;
+        width: 100%;
         height: 175px;
-        margin-right: 20px;
-        margin-top: 15px;
         text-align: center;
         align-items: center;
         justify-content: center;
-        
+        display: flex;
+        flex-direction: column;
     }
     .data {
-        margin-top: 40px;
         text-align: center;
     }
-    .pop-up { 
-        position: sticky;
-        top: 150px;
-        margin-right: 100px;
-        margin-top: 68px;
+    .pop-up-box {
+        position: absolute;
+        top: unset;
+        right: unset;
+        bottom: -40px;
     }
-
     .pop-up::after {
         bottom: 5px;
     }
-    .status {
-        width: 250px;
-        height: 18px;
-    }
-    .space {
-        width: 180px;
-        border: solid 2px;
-    }
-
-    .circle {
-        margin-right: -135px;
-    }
-    .right {
-        margin-right: -195px;
-        right: 50px;
-        
-    }
-
-    .data > p {
-        margin-right: 52px;
-    }
+    .status {}
+    .space {}
+    .circle {}
+    .right {}
+    .data>p {}
 }
